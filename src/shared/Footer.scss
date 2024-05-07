@@ -1,0 +1,136 @@
+.footer {
+    background: #495e57;
+    height: 100%;
+    width: 100%;
+
+    &-container {
+        display: grid;
+        padding: 2rem 0;
+        max-width: 65rem;
+        margin: 0 auto;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        height: 100%;
+        width: 100%;
+        grid-template-areas: "icon sitemap contact social";
+        grid-column-gap: 1.5rem;
+    }
+
+    &-logo {
+        height: 170px;
+        object-fit: contain;
+    }
+
+    &-title {
+        color: #fff;
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        margin: 0 0 1rem 0;
+    }
+
+    &-site-map {
+        grid-area: sitemap;
+        align-self: start;
+    }
+
+    &-contact {
+        grid-area: contact;
+    }
+
+    &-social {
+        grid-area: social;
+    }
+
+    &-item {
+        margin: 0.5rem 0;
+        text-decoration: none;
+        color: white;
+        display: flex;
+
+        &:hover {
+            animation-name: colorChange;
+            animation-duration: 1s;
+        }
+    }
+}
+
+@keyframes colorChange {
+    0% {
+        color: white;
+    }
+
+    100% {
+        color: #f4ce14;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .footer {
+        background: #495e57;
+        height: 100%;
+        width: 100%;
+
+        &-container {
+            display: grid;
+            padding: 2rem 0rem;
+            margin: 0 auto;
+            grid-template-columns: 40fr 60fr;
+            height: 100%;
+            width: 100%;
+            grid-template-areas: "icon sitemap";
+            grid-column-gap: 0.25rem;
+        }
+
+        &-logo {
+            height: 170px;
+            object-fit: contain;
+            align-self: center;
+            justify-self: center;
+        }
+
+        &-title {
+            color: #fff;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            margin: 0 0 1rem 0;
+        }
+
+        &-site-map {
+            grid-area: sitemap;
+            align-self: start;
+        }
+
+        &-contact {
+            grid-area: contact;
+            display: none;
+        }
+
+        &-social {
+            grid-area: social;
+            display: none;
+        }
+
+        &-item {
+            margin: 0.5rem 0;
+            text-decoration: none;
+            color: white;
+            display: flex;
+
+            &:hover {
+                animation-name: colorChange;
+                animation-duration: 1s;
+            }
+        }
+    }
+
+    @keyframes colorChange {
+        0% {
+            color: white;
+        }
+
+        100% {
+            color: #f4ce14;
+        }
+    }
+}
