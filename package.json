@@ -19,6 +19,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:unit": "jest --testPathPattern=src/js/tests/unit-tests",
+    "test:integration": "jest  --testPathPattern=src/js/tests/integration",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
